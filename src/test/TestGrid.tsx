@@ -69,7 +69,7 @@ export const TestGrid: React.FC<TestGridProps> = (props) => {
             if (ri === 0) return { type: firstRowType, text: `${ri} - ${ci}` }
             if (ri === 2 && ci === 8) return { type: 'text', text: `non-editable`, nonEditable: true, validator: (text: string): boolean => true }
             if (ri === 3 && ci === 8) return { type: 'text', text: '', placeholder: 'placeholder', validator: (text: string): boolean => true }
-            
+
             const spannedCells = config.spannedCells?.filter(sC => sC.idx === ci && sC.idy === ri)[0];
             const headerCells = config.headerCells?.filter(sC => sC.idx === ci && sC.idy === ri)[0];
             if (spannedCells || headerCells) {
@@ -187,6 +187,7 @@ export const TestGrid: React.FC<TestGridProps> = (props) => {
         });
     };
 
+/* eslint-disable  @typescript-eslint/no-unnecessary-type-constraint */
     const reorderArray = <T extends unknown>(arr: T[], idxs: number[], to: number) => {
         const movedElements: T[] = arr.filter((_: T, idx: number) => idxs.includes(idx));
         to = Math.min(...idxs) < to ? to += 1 : to -= idxs.filter(idx => idx < to).length;

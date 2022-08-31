@@ -6,6 +6,7 @@ interface PaneShadowProps {
     className: string;
     style: React.CSSProperties;
     zIndex?: number;
+    children?: React.ReactNode;
 }
 
 export const PaneShadow: React.FC<PaneShadowProps> = ({ renderCondition, className, style, zIndex, children }) => {

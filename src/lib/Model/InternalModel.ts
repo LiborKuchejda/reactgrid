@@ -26,8 +26,8 @@ export interface GridRow extends Row {
     readonly height: number;
 }
 
-// ASK ARCHITECT BEFORE INTRODUCING ANY CHANGE!	
-// INTERNAL	
+// ASK ARCHITECT BEFORE INTRODUCING ANY CHANGE!
+// INTERNAL
 export interface Borders {
     top?: boolean;
     left?: boolean;
@@ -55,6 +55,7 @@ export interface PointerLocation extends Location {
 
 export interface GridRendererProps {
     eventHandlers: EventHandlers;
+    children?: React.ReactNode;
 }
 
 export interface PaneContentChild {

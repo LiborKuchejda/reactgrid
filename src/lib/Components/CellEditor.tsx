@@ -17,6 +17,7 @@ export interface CellEditorOffset {
 interface CellEditorProps {
     cellType: string;
     style: React.CSSProperties;
+    children?: React.ReactChild | React.ReactChild[] | React.ReactNode
 }
 
 export interface PositionState<TState extends State = State> {

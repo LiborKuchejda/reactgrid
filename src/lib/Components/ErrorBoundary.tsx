@@ -32,7 +32,7 @@ export class ErrorBoundary extends Component<Record<string, unknown>, ErrorBound
                 </details>
             </>)
         } else {
-            return this.props.children;
+            return (this.props as any).children;
         }
     }
 
